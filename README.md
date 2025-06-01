@@ -1,124 +1,92 @@
-# Form Builder
+# 🧩 Form Builder – SDE Intern Frontend Assignment
 
-A modern, feature-rich form builder and management application built with React Remix. Create, share, and collect responses with a clean, intuitive interface.
+A drag-and-drop form builder that allows users to visually create, configure, preview, and share custom forms in real time. Built using **React Remix** and **Tailwind CSS**, this project focuses on intuitive UX, real-time feedback, and extendability with local storage and shareable links.
 
-**Live Demo:** [https://form-builder-alpha-ten.vercel.app/](https://form-builder-alpha-ten.vercel.app/)
-**Video Demo:** [https://youtu.be/2URwDjsSQgk/](https://youtu.be/2URwDjsSQgk/)
+---
 
-![image](https://github.com/user-attachments/assets/97f72dc5-aba0-4d5d-af95-0630cbfa4425)
+## 🚀 Features
+
+### ✅ Core Functionality
+- **Drag & Drop Fields**: Easily add and arrange fields like Text, Textarea, Dropdown, Checkbox, Date.
+- **Field Reordering**: Use drag actions to rearrange fields dynamically.
+- **Field Configuration**: Customize label, placeholder, required status, help text, and options.
+- **Live Preview**: Real-time form preview with validation (required, min/max length, pattern match).
+- **Responsive Preview Modes**: Toggle between Desktop, Tablet, and Mobile views.
+- **Multi-Step Forms**: Add step-by-step navigation with progress indicator and per-step validation.
+- **Template Support**:
+  - Load predefined templates (e.g., Contact Us).
+  - Save templates to local storage or API (extendable).
+- **Shareable Forms**:
+  - Generate a public URL (form ID based).
+  - Load & fill a form using the shared ID.
+
+---
+
+### ✨ Bonus Tasks Implemented
+- **📝 Auto-Save**: Real-time form state saving to `localStorage` with debounce.
+- **📬 View Submissions**: Form creators can view all responses submitted to their forms.
+- **🌗 Dark/Light Theme**: Toggle between light and dark modes for better accessibility.
+- **↩️ Undo/Redo**: Supports step-wise undo/redo while building the form (with history stack).
+
+---
+
+## 🧪 Tech Stack
+
+- **Frontend Framework**: [React Remix](https://remix.run/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **State Management**: [Zustand](https://github.com/pmndrs/zustand) / Redux / Context API (pluggable)
+- **Drag & Drop**: `@dnd-kit` for highly accessible drag-and-drop functionality
+- **Form Validation**: Custom + HTML5 + optional integration-ready for libraries like `react-hook-form`
+- **Persistence**: `localStorage`, extendable to API or Firebase backend
+
+---
 
 
-## Features
+## 🧠 Project Architecture
+src/
+│
+├── components/ # Reusable UI elements
+├── features/ # Form builder logic (field types, validations, etc.)
+├── pages/ # Remix routes
+├── hooks/ # Custom hooks (e.g., useUndoRedo, useFormPersist)
+├── store/ # Zustand store config
+├── utils/ # Utility functions
+└── styles/ # Tailwind & theme configs
 
-### Form Building
-- **Drag-and-Drop Interface**: Easily create forms by dragging components from the palette
-- **Multiple Field Types**: Support for text, textarea, select, checkbox, radio, date, email, phone, and number fields
-- **Field Customization**: Configure field properties like labels, placeholders, required status, and help text
-- **Form Preview**: Real-time preview of your form as you build it
-- **Responsive Design Preview**: Test how your form looks on desktop, tablet, and mobile devices
 
-### Form Management
-- **Templates**: Save and reuse form templates for common use cases
-- **Built-in Templates**: Pre-built templates for common form types (Contact, Survey)
-- **Dark Mode**: Toggle between light and dark themes for comfortable editing
+---
 
-### Form Sharing
-- **Shareable Links**: Generate unique links to share your forms with respondents
-- **Copy to Clipboard**: One-click copying of form links
-- **Form Status**: Track the number of responses for each form
+## 🛠️ Setup & Run Locally
 
-### Response Collection
-- **Response Viewer**: View all responses in a clean, tabular format
-- **Response Filtering**: Select specific forms to view their responses
-- **Export to CSV**: Download responses as CSV files for further analysis
-- **Response Statistics**: See the number of responses for each form at a glance
-
-### User Experience
-- **Modern UI**: Clean, intuitive interface with smooth animations
-- **Offline Capability**: Forms and responses are stored in localStorage
-- **Progress Saving**: Form fillers can save their progress and return later
-- **Validation**: Built-in validation for required fields and specific field types
-
-## Technical Details
-
-### Architecture
-- **React Remix**: Built with React Remix for server-rendered React applications
-- **State Management**: Uses React's Context API and useReducer for state management
-- **Local Storage**: Stores forms, templates, and responses in browser localStorage
-- **CSS**: Styled with Tailwind CSS for a responsive, modern design
-
-### Data Storage
-- **Forms**: Stored in `formBuilderForms` localStorage key
-- **Shared Forms**: Stored in `sharedForms` localStorage key
-- **Templates**: Stored in `customFormTemplates` localStorage key
-- **Responses**: Stored in `formResponses` localStorage key
-- **In-Progress Forms**: Stored in `formFillerProgress` localStorage key
-
-### Components
-- **FormBuilderMain**: Main form builder interface
-- **FieldPalette**: Draggable field components
-- **FormCanvas**: Form editing area
-- **FormPreview**: Real-time form preview
-- **FormFiller**: Form response interface for end-users
-- **ResponseViewer**: View and export form responses
-- **FieldEditor**: Edit field properties
-
-## Getting Started
-
-### Prerequisites
-- Node.js (v14 or higher)
-- npm or yarn
-
-### Installation
-
-1. Clone the repository:
 ```bash
-git clone [https://github.com/Prabhsingh0401/Form-Builder.git](https://github.com/Prabhsingh0401/Form-Builder-Remix.git)
-cd form-builder
-```
+# 1. Clone the repository
+git clone https://github.com/your-username/form-builder-remix.git
 
-2. Install dependencies:
-```bash
+# 2. Navigate to the project
+cd form-builder-remix
+
+# 3. Install dependencies
 npm install
-# or
-yarn install
-```
 
-3. Start the development server:
-```bash
+# 4. Run the development server
 npm run dev
-# or
-yarn dev
-```
+🔗 Live Demo
+🌐 
 
-4. Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-## Usage Guide
+📽️ Video Walkthrough
+🎥 Watch the full demo
 
-### Creating a Form
-1. Open the Form Builder
-2. Drag fields from the left palette onto the canvas
-3. Click on fields to edit their properties
-4. Use the preview panel to see how your form will look
-5. Click "Save" to save your form
 
-### Using Templates
-1. Click "Templates" to view available templates
-2. Select a template to load it into the editor
-3. Customize the template as needed
-4. To save your own template, click "Template it"
 
-### Sharing Forms
-1. Click the "Share" button
-2. The form link will be copied to your clipboard
-3. Share this link with your respondents
+🧪 Future Improvements
+🔐 Backend sync with Firebase or Supabase
 
-### Viewing Responses
-1. Click "Responses" to open the response viewer
-2. Select a form to view its responses
-3. Use the "Export CSV" button to download responses
+📤 Export forms as JSON or embed code
 
-## Acknowledgments
+👨‍👩‍👧‍👦 Team collaboration (multi-user editing)
 
-- Icons by [Lucide](https://lucide.dev/)
-- Built with [React Remix](https://remix.run/) and [React](https://reactjs.org/)
+🧩 Plugin system for custom field types
+👨‍💻 Author
+Made with ❤️ by Prathmesh
+🔗 Portfolio • LinkedIn
