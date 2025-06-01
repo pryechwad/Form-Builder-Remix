@@ -1,4 +1,4 @@
-# 🧩 Form Builder – SDE Intern Frontend Assignment
+# 🧩 Form Builder – Hypergro SDE Intern Frontend Assignment
 
 A drag-and-drop form builder that allows users to visually create, configure, preview, and share custom forms in real time. Built using **React Remix** and **Tailwind CSS**, this project focuses on intuitive UX, real-time feedback, and extendability with local storage and shareable links.
 
@@ -53,8 +53,13 @@ src/
 ├── utils/ # Utility functions
 └── styles/ # Tailwind & theme configs
 
+🔗 Live Demo: https://form-builder-remix-main.vercel.app/
+ 
 
----
+
+📽️ Video Walkthrough
+🎥 Watch the full demo
+[---](https://drive.google.com/file/d/1qoHRz_XdzkkXbSpN74tusD1Cp8VjFMo1/view?usp=sharing)
 
 ## 🛠️ Setup & Run Locally
 
@@ -70,12 +75,7 @@ npm install
 
 # 4. Run the development server
 npm run dev
-🔗 Live Demo: https://form-builder-remix-main.vercel.app/
-🌐 
 
-
-📽️ Video Walkthrough
-🎥 Watch the full demo
 
 
 
@@ -87,6 +87,6 @@ npm run dev
 👨‍👩‍👧‍👦 Team collaboration (multi-user editing)
 
 🧩 Plugin system for custom field types
-👨‍💻 Author
+
 Made with ❤️ by Prathmesh
-🔗 Portfolio • LinkedIn
+
